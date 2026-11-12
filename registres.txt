@@ -1,0 +1,72 @@
+X0      zero        vaut toujours 0 ; en destination, la valeur est perdue
+X1      ra          return address ; CALL : adresse retour stockée dans x1, utilisée par RET qui branche à l'adresse contenue dans x1
+X2      sp          stack pointer
+X3      gp          global pointer : pointeur vers variables statiques, ex. lw t0, 32(gp) ; offset de 12 bits
+X4      tp          thread pointer : pointeur vers zone de stockage de paramètres et variables de sous-processus
+X5      t0          temporary 0
+X6      t1          temporary 1
+X7      t2          temporary 2
+X8      s0          saved 0 ou fp (frame pointer) = bas de la pile
+X9      s1          saved 1
+X10     a0          argument 0, résultat (retour de fonction)
+x11     a1          argument 1, résultat (retour de fonction)
+x12     a2          argument 2
+x13     a3          argument 3
+x14     a4          argument 4
+x15     a5          argument 5
+x16     a6          argument 6
+x17     a7          argument 7
+x18     s2          saved 2
+x19     s3          saved 3
+x20     s4          saved 4
+x21     s5          saved 5
+x22     s6          saved 6
+x23     s7          saved 7
+x24     s8          saved 8
+x25     s9          saved 9
+x26     s10         saved 10
+x27     s11         saved 11
+x28     t3          temporary 3
+x29     t4          temporary 4
+x30     t5          temporary 5
+x31     t6          temporary 6
+
+registres temporaires : l'appelant doit les sauvegarder le cas échéant
+registres d'argument : l'appelant doit les sauvegarder le cas échéant
+registres sauvegardés : par l'appelé
+
+f0      ft0         temporary 0
+f1      ft1         temporary 1
+f2      ft2         temporary 2
+f3      ft3         temporary 3
+f4      ft4         temporary 4
+f5      ft5         temporary 5
+f6      ft6         temporary 6
+f7      ft7         temporary 7
+f8      fs0         saved 0
+f9      fs1         saved 1
+f10     fa0         argument 0
+f11     fa1         argument 1
+f12     fa2         argument 2
+f13     fa3         argument 3
+f14     fa4         argument 4
+f15     fa5         argument 5
+f16     fa6         argument 6
+f17     fa7         argument 7
+f18     fs2         saved 2
+f19     fs3         saved 3
+f20     fs4         saved 4
+f21     fs5         saved 5
+f22     fs6         saved 6
+f23     fs7         saved 7
+f24     fs8         saved 8
+f25     fs9         saved 9
+f26     fs10        saved 10
+f27     fs11        saved 11
+f28     ft8         temporary 8
+f29     ft9         temporary 9
+f30     ft10        temporary 10
+f31     ft11        temporary 11
+
+v0 à v31 : vertor registers
+
