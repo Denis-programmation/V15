@@ -1,0 +1,6 @@
+qemu-system-riscv64 -smp 6 \
+    -machine virt -nographic -m 4096 \
+    -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf \
+    -device virtio-net-device,netdev=eth0 -netdev user,id=eth0 \
+    -device virtio-rng-pci \
+    -drive file=ubuntu-25.04-preinstalled-server-riscv64.img,format=raw,if=virtio
